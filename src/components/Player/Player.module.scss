@@ -1,0 +1,57 @@
+.player {
+  display: flex;
+  gap: 0.75rem;
+  height: fit-content;
+  align-items: center;
+  & > .track_container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    & > .user_interaction {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      height: 0.75rem;
+      & > .track {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 0.75rem;
+        & > .track_start {
+          width: 0;
+          display: flex;
+          overflow: hidden;
+          pointer-events: none;
+          max-width: 100%;
+        }
+        & > .track_handle {
+          width: 0.75rem;
+          height: 0.75rem;
+          border-radius: 100rem;
+          background: var(--primary);
+          margin: 0 -0.375rem;
+          z-index: 10;
+          pointer-events: none;
+        }
+        & > .track_end {
+          display: flex;
+          flex: 1;
+          height: 2px;
+          border-radius: 0 100rem 100rem 0;
+          background: var(--secondary);
+          pointer-events: none;
+        }
+      }
+      & > .timer {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.75rem;
+        font-weight: medium;
+        letter-spacing: 0.5px;
+        line-height: 1rem;
+        color: var(--secondary);
+        user-select: none;
+        pointer-events: none;
+      }
+    }
+  }
+}

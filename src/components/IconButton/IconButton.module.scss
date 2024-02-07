@@ -1,0 +1,58 @@
+.icon_button_standard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 100rem;
+  background: var(--surface-container);
+  cursor: pointer;
+  & > .state_layer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    border-radius: inherit;
+    padding: 0.75rem;
+    &:hover {
+      background: color-mix(in srgb, var(--on-surface-variant) 8%, transparent);
+    }
+    &:active {
+      background: color-mix(in srgb, var(--on-surface-variant) 12%, transparent);
+    }
+    & > span {
+      color: var(--on-surface-variant);
+    }
+  }
+}
+
+.icon_button_tonal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 100rem;
+  background: var(--tertiary-container);
+  cursor: pointer;
+  // transition: border-radius .2s cubic-bezier(.2, 0, 0, 1);
+  & > .state_layer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    border-radius: inherit;
+    padding: 0.75rem;
+    &:hover {
+      background: color-mix(in srgb, var(--on-tertiary-container) 8%, transparent);
+    }
+    &:active {
+      background: color-mix(in srgb, var(--on-tertiary-container) 12%, transparent);
+    }
+    & > span {
+      color: var(--on-tertiary-container);
+    }
+  }
+}
