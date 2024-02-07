@@ -16,7 +16,7 @@ export default function Card({id = 0, setActiveCard, expanded = false, display =
         {!expanded && (
           <div className={styles.text}>
             <h2>{podcasts[id].title}</h2>
-            <p>{podcasts[id].author}</p>
+            <p>{'Par ' + podcasts[id].author}</p>
           </div>
         )}
         <Player audio={podcasts[id].audio} />
