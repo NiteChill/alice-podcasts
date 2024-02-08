@@ -49,9 +49,11 @@ export default function Player({ width = 320, audio }) {
       />
       <div
         className={styles.track_container}
+        onMouseDown={(e) => updateProgress(e, true)}
         onMouseMove={(e) => mouseDown && updateProgress(e)}
         onMouseLeave={() => setMouseDown(false)}
         onMouseUp={() => setMouseDown(false)}
+        onTouchStart={(e) => updateProgress(e, true)}
         onTouchMove={(e) => mouseDown && updateProgress(e)}
         onTouchCancel={() => setMouseDown(false)}
         onTouchEnd={() => setMouseDown(false)}
@@ -60,7 +62,6 @@ export default function Player({ width = 320, audio }) {
           <div
             className={styles.track}
             style={{ width: `${width - 60}px` }}
-            onMouseDown={(e) => updateProgress(e, true)}
             draggable='false'
           >
             <div
