@@ -55,6 +55,7 @@ export default function Player({ width = 320, audio }) {
         onMouseUp={() => setMouseDown(false)}
         onTouchStart={(e) => updateProgress(e, true)}
         onTouchMove={(e) => mouseDown && updateProgress(e)}
+        onTouchMoveCapture={(e) => mouseDown && updateProgress(e)}
         onTouchCancel={() => setMouseDown(false)}
         onTouchEnd={() => setMouseDown(false)}
       >
