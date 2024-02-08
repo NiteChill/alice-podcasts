@@ -17,6 +17,7 @@ export default function Player({ width = 320, audio }) {
     [duration, setDuration] = useState(0),
     [mouseDown, setMouseDown] = useState(false);
   function updateProgress(e, press = false) {
+    e.preventDefault();
     audioRef.current.currentTime =
       ((e.clientX - e.target.getBoundingClientRect().left) /
         e.target.getBoundingClientRect().width) *
@@ -53,11 +54,7 @@ export default function Player({ width = 320, audio }) {
         onMouseMove={(e) => mouseDown && updateProgress(e)}
         onMouseLeave={() => setMouseDown(false)}
         onMouseUp={() => setMouseDown(false)}
-        onTouchStart={(e) => updateProgress(e, true)}
-        onTouchMove={(e) => mouseDown && updateProgress(e)}
-        onTouchMoveCapture={(e) => mouseDown && updateProgress(e)}
-        onTouchCancel={() => setMouseDown(false)}
-        onTouchEnd={() => setMouseDown(false)}
+        onTouch={(e) => updateProgress(e)}
       >
         <div className={styles.user_interaction} draggable='false'>
           <div
