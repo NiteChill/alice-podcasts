@@ -54,7 +54,7 @@ export default function Player({ width = 320, audio }) {
         onMouseMove={(e) => mouseDown && updateProgress(e)}
         onMouseLeave={() => setMouseDown(false)}
         onMouseUp={() => setMouseDown(false)}
-        onTouch={(e) => updateProgress(e)}
+        onTouch={() => updateProgress(e)}
       >
         <div className={styles.user_interaction} draggable='false'>
           <div
