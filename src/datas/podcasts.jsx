@@ -22,6 +22,21 @@ import audio_worker from '../assets/audio/worker.mp3';
 
 export const podcasts = [
   {
+    title: 'Papy',
+    img: worker,
+    audio: audio_worker,
+  },
+  {
+    title: 'Voyage',
+    img: paki,
+    audio: audio_paki,
+  },
+  {
+    title: 'Joie de vivre',
+    img: old_woman,
+    audio: audio_old_woman,
+  },
+  {
     title: 'Force',
     img: balth,
     audio: audio_balth,
@@ -50,20 +65,5 @@ export const podcasts = [
     title: 'Folie',
     img: marco,
     audio: audio_marco,
-  },
-  {
-    title: 'Joie de vivre',
-    img: old_woman,
-    audio: audio_old_woman,
-  },
-  {
-    title: 'Voyage',
-    img: paki,
-    audio: audio_paki,
-  },
-  {
-    title: 'Papy',
-    img: worker,
-    audio: audio_worker,
   },
 ];
