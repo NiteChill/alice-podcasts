@@ -23,7 +23,7 @@ export default function App() {
           <h1>
             {activeCard || activeCard === 0
               ? podcasts[activeCard].title
-              : "Les podcasts d'Alice"}
+              : "Souvenirs, souvenirs..."}
           </h1>
           <IconButton
             onClick={() =>
