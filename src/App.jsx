@@ -42,7 +42,7 @@ export default function App() {
             }
           />
         </main>
-        <p>{(activeCard || activeCard === 0) && 'Par ' + podcasts[activeCard].author}</p>
+        {/* <p>{(activeCard || activeCard === 0) && 'Par ' + podcasts[activeCard].author}</p> */}
       </nav>
       <div
         className={`cards_container ${

@@ -13,12 +13,12 @@ export default function Card({id = 0, setActiveCard, expanded = false, display =
         onClick={() => setActiveCard(id)}
       ></div>
       <div className={styles.container}>
-        {!expanded && (
+        {/* {!expanded && (
           <div className={styles.text}>
             <h2>{podcasts[id].title}</h2>
             <p>{'Par ' + podcasts[id].author}</p>
           </div>
-        )}
+        )} */}
         <Player audio={podcasts[id].audio} />
       </div>
     </div>
